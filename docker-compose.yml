@@ -5,6 +5,5 @@ services:
     container_name: crud-app
     ports:
       - "${PORT}:${PORT}"
-    environment:
-      - PORT=${PORT}
-      - MONGODB_URI=${MONGODB_URI}
+    env_file:
+      - .env
